@@ -3,18 +3,18 @@ import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/range_options.dart';
 
 class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
-
+  const AllExpensesHeader({super.key, required this.headerText});
+final String headerText;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       children: [
          Text(
-          'All Expenses',
+          headerText,
           style: AppStyles.styleSimiBolde20,
         ),
-         Expanded(child: SizedBox()),
-        RangeOptions(),
+        const Expanded(child: SizedBox()),
+       const RangeOptions(),
       ],
     );
   }
