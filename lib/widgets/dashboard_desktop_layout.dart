@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/expenses_and-Invioce_scroll_view.dart';
-import 'package:responsive_dashboard/widgets/income_section.dart';
 import 'package:responsive_dashboard/widgets/my_cards_and_transcation_history.dart';
 
 class DashboardDeskTopLayout extends StatelessWidget {
@@ -17,7 +16,7 @@ class DashboardDeskTopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: ExpensesAndInvioceScrollView(),
+          child: ExpensesAndInvioceSection(),
         ),
         SizedBox(
           width: 24,
@@ -29,10 +28,10 @@ class DashboardDeskTopLayout extends StatelessWidget {
                 height: 40,
               ),
               MyCardsAndTranscationHistory(),
-              SizedBox(
-                height: 24,
-              ),
-              Expanded(child: IncomeSection()),
+              // SizedBox(
+              //   height: 24,
+              // ),
+              // Expanded(child: IncomeSection()),
             ],
           ),
         ),

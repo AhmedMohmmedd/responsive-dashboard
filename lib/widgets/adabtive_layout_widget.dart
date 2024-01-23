@@ -13,9 +13,9 @@ class AdaptiveLayoutBulider extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth < 800) {
           return mobilelayout(context);
-        } else if (constraints.maxWidth < 900) {
+        } else if (constraints.maxWidth < 1000) {
           return tabletLayout(context);
         } else {
           return daskTopLayout(context);
