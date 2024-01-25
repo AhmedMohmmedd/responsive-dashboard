@@ -21,7 +21,7 @@ class MyCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Flexible(child: SizedBox(height: 16,)),
+          const  Flexible(child: SizedBox(height: 16,)),
             ListTile(
               contentPadding:
                   const EdgeInsets.only(left: 31, right: 42, top: 0),
