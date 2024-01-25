@@ -21,16 +21,16 @@ class TranscationIteam extends StatelessWidget {
           
           transcationModel.title,
           maxLines: 1,
-          style: AppStyles.styleSimiBolde16,
+          style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           transcationModel.date,
-          style: AppStyles.styleRegular16.copyWith(
+          style: AppStyles.styleRegular16(context).copyWith(
             color: const Color(0xFFAAAAAA),
           ),
         ),
         trailing: Text(transcationModel.amount,
-            style: AppStyles.styleSimiBolde20.copyWith(
+            style: AppStyles.styleSemiBold20(context).copyWith(
               color: transcationModel.isWithrawel
                   ? const Color(0xFFF3735E)
                   : const Color(0xFF7CD87A),

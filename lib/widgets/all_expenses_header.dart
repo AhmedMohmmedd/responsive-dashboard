@@ -11,7 +11,7 @@ final String headerText;
       children: [
          Text(
           headerText,
-          style: AppStyles.styleSimiBolde20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         const Expanded(child: SizedBox()),
        const RangeOptions(),
