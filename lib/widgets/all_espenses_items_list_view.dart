@@ -33,38 +33,43 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // children: items.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
+      children: [
+        Expanded(
             child: GestureDetector(
               onTap: () {
-                updateIndex(index);
+                updateIndex(0);
               },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensesItem(
-                  itemModel: item,
-                  isActive: slectedItem == index,
-                ),
+              child: AllExpensesItem(
+                itemModel: items[0],
+                isActive: slectedItem == 0,
               ),
             ),
-          );
-        } else {
-          return Expanded(
+          )  ,   
+        const  SizedBox(width: 12,),
+        Expanded(
             child: GestureDetector(
-                onTap: () {
-                  updateIndex(index);
-                },
-                child: AllExpensesItem(
-                  itemModel: item,
-                  isActive: slectedItem == index,
-                )),
-          );
-        }
-      }).toList(),
+              onTap: () {
+                updateIndex(1);
+              },
+              child: AllExpensesItem(
+                itemModel: items[1],
+                isActive: slectedItem == 1,
+              ),
+            ),
+          )  ,   
+          const  SizedBox(width: 12,),
+        Expanded(
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(2);
+              },
+              child: AllExpensesItem(
+                itemModel: items[2],
+                isActive: slectedItem == 2,
+              ),
+            ),
+          )  ,   
+      ],
     );
   }
 
